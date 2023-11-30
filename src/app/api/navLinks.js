@@ -16,7 +16,7 @@ export const navLinks =
    
     {
         "name":"Documentation",
-        "path":"/"
+        "path":"/documentation"
 
     }
 ]

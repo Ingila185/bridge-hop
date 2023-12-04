@@ -32,7 +32,14 @@ return (
         </li>
        
       ))}
-
+<li>
+<a href="#" className="inline-flex justify-center bg-blue
+             hover:text-gray-900 items-center px-2 py-1 sm:ms-4 text-base 
+             font-medium text-center text-white rounded-3xl border border-transparent hover:bg-gray-
+              focus:ring-4 focus:ring-gray-400">
+                Connect Wallet
+            </a>  
+</li>
 
        
     </ul>

@@ -12,8 +12,14 @@ const config: Config = {
       'white':'#ffffff',
       'black':'#000000',
       'transparent': 'transparent',
-      'blue':'#004BAD'
-    },
+      'blue':'#004BAD',
+      'shadowBlue':'#003173',
+      'buttonBlue':'#001DB6',
+      'grey':'#8F8D8D',
+      'boxBorder':'#001A3D',
+      'maxGradientFrom':'#024EB2',
+      'cardBorder':'#3C5BFF'
+        },
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

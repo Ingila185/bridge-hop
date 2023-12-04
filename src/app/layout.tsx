@@ -17,9 +17,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className} >
-        
-{children}
+      <body  >
+        <main className='h-full flex flex-col gap-2'>
+    <NavBar/>
+    {children}
+    </main>
         </body>
     </html>
   )

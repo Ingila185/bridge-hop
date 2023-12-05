@@ -5,7 +5,7 @@ export const navLinks =
         "path":"/"
     },{
         "name":"Swap",
-        "path":"/"
+        "path":"/swap"
 
     },
     {

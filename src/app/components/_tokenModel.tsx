@@ -7,12 +7,16 @@ export default function TokenModel()
     return (
         <>
           <button
-            className="bg-buttonBlue rounded-lg m-8 h-auto p-2"
+            className="bg-transparent rounded-lg  h-auto w-full"
             type="button"
             onClick={() => setShowModal(true)}
           >
-           LINK
+           ETH
+           <svg className="w-2.5 h-2.5 " aria-hidden="true" fill="none" viewBox="0 0 10 5">
+<path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/>
+</svg>
           </button>
+          
           {showModal ? (
             <>
               <div

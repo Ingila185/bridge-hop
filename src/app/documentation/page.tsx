@@ -3,7 +3,7 @@ export default function documentation()
     return (
       <div className="px-10 mx-auto  flex flex-col justify-between gap-y-10 bg-gradient-to-br from-dreamBlack to-dreamBlack h-full">
             <center>
-                 <h1 className = "py-20 text-sm lg:text-xs  xl:text-lg font-extrabold underline text-white">
+                 <h1 className = "pt-20 text-sm lg:text-xs  xl:text-lg font-extrabold underline text-white">
                     Bridging Testnet Blockchains with Mountain
                  </h1></center>
             <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 " >

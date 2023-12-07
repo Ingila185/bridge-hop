@@ -2,12 +2,19 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { navLinks } from "../api/navLinks";
+import { MetaMaskProvider } from '@metamask/sdk-react';
+
 import { FaBars, FaTimes } from "react-icons/fa";
 import ConnectWallet from "./_connectWallet";
 
 const NavBar = () =>{
     const [nav, setNav] = useState(false);
-
+    var host = "";
+    React.useEffect(()=>
+    {
+        host = host
+    })
+ 
 
 return (
     <div className="flex justify-between items-center w-full h-20 p-5 text-white bg-transparent fixed nav">
@@ -44,10 +51,7 @@ return (
 
 <li>
             <ConnectWallet />
-          </li>
-
-
-       
+          </li>       
     </ul>
 
     <div

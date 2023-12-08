@@ -28,7 +28,26 @@ export default function ConnectWallet()
 
         let accounts = await window.ethereum?.request({   /* New */
         method: "eth_requestAccounts",                 /* New */
-      })  
+      }).then((res)=>
+      {
+        if(Array(res).length > 0)
+        {
+            alert("connected successfully")
+        }
+      }).catch((err)=>{
+
+        if(err.code == 4001)
+        {
+alert(err.message)
+        }
+        else{
+            console.log(err)
+        }
+
+      }).finally(()=>
+      {
+        setShowModal(false)
+      })
       updateWallet(accounts)                           /* New */
 
       };
@@ -48,6 +67,7 @@ export default function ConnectWallet()
          
           </button>
           
+
           {showModal ? (
 <div  id="crypto-modal" aria-hidden="true" 
 className=" mx-auto overflow-y-auto overflow-x-hidden fixed top-10 right-50 left-0 z-50  
@@ -58,7 +78,10 @@ justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full rou
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                     Connect wallet
                 </h3>
-                <button type="button" className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm h-8 w-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="crypto-modal">
+                <button type="button" 
+                className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg 
+                text-sm h-8 w-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 
+                dark:hover:text-white" onClick={()=>{setShowModal(false)}}>
                     <svg className="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
                         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
                     </svg>
@@ -116,6 +139,13 @@ justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full rou
     </div>
 </div>
 ) : null}
+
+{/**Toast */}
+
+
+
 </>
+
+
     );
 }
